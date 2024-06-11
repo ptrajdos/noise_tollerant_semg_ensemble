@@ -1,0 +1,7 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[test-system]
+requires = [ "pytest" ]  # PEP 508 specifications.
+test-backend = "pytest"
