@@ -1,7 +1,6 @@
 from dexterous_bioprosthesis_2021_raw_datasets_framework.raw_signals.raw_signals import RawSignals
 from dexterous_bioprosthesis_2021_raw_datasets_framework.set_creators.set_creator import SetCreator
 
-from dexterous_bioprosthesis_dataset_creator.featureextraction.feature_extractor_multichannel_interface import FeatureExtractorMultichannel
 import numpy as np
 
 import pandas as pd
@@ -12,7 +11,7 @@ class SetCreatorFeatureExtractor(SetCreator):
     Creates a new set using feature creators
     """
     
-    def __init__(self, multichannel_extractor:FeatureExtractorMultichannel) -> None:
+    def __init__(self, multichannel_extractor) -> None:
         super().__init__()
         self.multichannel_extractor = multichannel_extractor
         self.channel_selected_attribs = None # List containing number of attributes for each channel

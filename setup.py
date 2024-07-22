@@ -56,6 +56,7 @@ setup(
                 'tabulate==0.9.0',
                 'Jinja2==3.1.2',
                 'seaborn==0.13.2',
+                'seaborn',
                 
         ],
         test_suite='test'

@@ -1,8 +1,6 @@
 
 from deslib.des.base import BaseDES
 from deslib.des.des_p import DESP
-from dexterous_bioprosthesis_dataset_creator.featureextraction.feature_extractor_function import FeatureExtractorFunction, MAV2_function
-from dexterous_bioprosthesis_dataset_creator.featureextraction.feature_extractor_multichannel_simple import FeatureExtractorMultichannelSimple
 import numpy as np
 from sklearn.base import BaseEstimator, ClassifierMixin, check_array, check_is_fitted
 from sklearn.ensemble import RandomForestClassifier, IsolationForest
