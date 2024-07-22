@@ -33,6 +33,7 @@ create_venv:
 	. ${VENV_SUBDIR}/bin/activate; ${PIP} install -e .
 
 download_data:
+	mkdir -p ${DATADIR}
 	${CURL} -L -o ${DATAFILE} "https://drive.usercontent.google.com/download?id=${DATAFILEID}&export=download&authuser=1&confirm=t"
 	${TAR} -xvf ${DATAFILE} --directory ${DATADIR}
 	
