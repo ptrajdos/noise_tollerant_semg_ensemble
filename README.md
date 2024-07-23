@@ -20,6 +20,11 @@ The experimental results will be located in: __./experiments\_results__
 
 ## Experiments
 
+To run all experiments type:
+```
+make run
+```
+
 ### One class classifiers
 
 To run the experiments on one-class classifiers type:
