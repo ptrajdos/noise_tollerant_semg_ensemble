@@ -5,7 +5,7 @@ from dexterous_bioprosthesis_2021_raw_datasets_framework.raw_signals.raw_signals
 from dexterous_bioprosthesis_2021_raw_datasets_framework.raw_signals.tools.uniform_column_detector import detect_uniform_columns_signals
 from dexterous_bioprosthesis_2021_raw_datasets_framework.raw_signals_filters.raw_signals_filter import RawSignalsFilter
 
-from mspca import mspca
+import mspca
 
 
 class RawSignalsFilterMSPCA(RawSignalsFilter):

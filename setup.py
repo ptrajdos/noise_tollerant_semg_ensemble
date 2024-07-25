@@ -1,16 +1,6 @@
 from setuptools import setup, find_packages
 import platform
 
-def numpy_version():
-    if "armv" in platform.machine():
-        return 'numpy==1.23.4'
-    return 'numpy>=1.22.4'
-
-def numba_version():
-    if "armv" in platform.machine():
-        return 'numba==0.56.4'
-
-    return 'numba'
 
 setup(
         name='dexterous_bioprosthesis_2021_raw_datasets_framework',
@@ -25,38 +15,24 @@ setup(
 		'dexterous_bioprosthesis_2021_raw_datasets_framework_experiments'
                 ]),
         install_requires=[ 
-                'pandas',
-                numpy_version(),
-                'matplotlib',
-                'scipy>=1.10.1',
-                'liac-arff',
-                'joblib',
+                'pandas==2.2.2',
+                'numpy==1.26.4',
+                'matplotlib==3.9.1',
+                'scipy==1.12.0',
+                'joblib==1.4.2',
                 'scikit-learn==1.2.2',
-                'tqdm',
+                'tqdm==4.66.4',
                 'joblib',
-                'dtw-python',
-                'Cython',
-                'fastdtw',
-                'tensorly',
-                'pygad==2.18.0',
-                'kneed',
-                'librosa',
-                'audiomentations', 
-                'problexity',
                 'mspca @git+https://github.com/ptrajdos/mspca.git@8020d725e243818129f4af3d67b5c7d4486c90f7',
-                'pyts==0.13.0',
                 'DESlib==0.3.5',
-                numba_version(),
+                'numba==0.60.0',
                 'statsmodels==0.13.5',
                 'PyWavelets==1.4.1',
-                'kernelnb @ git+https://github.com/ptrajdos/KernelNB.git@c38c01a7bf440417852a3b656c4353fab3dc46c9',
                 'pt_outlier_probability @ git+https://github.com/ptrajdos/ptOutlierProbability.git@4d137a12220612ed6078178a6cf54b4c98699d99',
-                'EntropyHub==2.0',
                 'ptranks @ git+https://github.com/ptrajdos/ptranks.git@7af07a0f3666f15b2794b078da440bcf89fae65b',
                 'tabulate==0.9.0',
                 'Jinja2==3.1.2',
                 'seaborn==0.13.2',
-                'seaborn',
                 
         ],
         test_suite='test'

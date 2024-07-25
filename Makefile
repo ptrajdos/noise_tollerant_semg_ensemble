@@ -4,6 +4,7 @@ DATAFILEID=15D-PUeOIHQXyJMhaoDGOxmSfAayMyBgb
 DATADIR=${ROOTDIR}/data
 VENV_SUBDIR=${ROOTDIR}/venv
 EXPERIMENT_SUBDIR=${ROOTDIR}/dexterous_bioprosthesis_2021_raw_datasets_framework_experiments
+LOGFILE=${ROOTDIR}/install.log
 
 PYTHON=python
 PIP=pip
@@ -22,17 +23,17 @@ clean:
 run_one_class: create_env
 	. ${VENV_SUBDIR}/bin/activate; ${PYTHON} ${EXPERIMENT_SUBDIR}/outlier_detection_experiment_snr2.py
 run_commitees: create_env
-	. ${VENV_SUBDIR}/bin/activate; ${PYTHON} ${EXPERIMENT_SUBDIR}/dexterous_bioprosthesis_2021_raw_datasets_framework_experiments/channel_combination_ensemble_fast_full.py
+	. ${VENV_SUBDIR}/bin/activate; ${PYTHON} ${EXPERIMENT_SUBDIR}/channel_combination_ensemble_fast_full.py
 
 run_reference: create_env
-	. ${VENV_SUBDIR}/bin/activate; ${PYTHON} ${EXPERIMENT_SUBDIR}/dexterous_bioprosthesis_2021_raw_datasets_framework_experiments/channel_combination_ensemble_full_2.py
+	. ${VENV_SUBDIR}/bin/activate; ${PYTHON} ${EXPERIMENT_SUBDIR}/channel_combination_ensemble_full_2.py
 
 run: run_one_class run_commitees run_reference
 	echo "Experiments performed"
 
 venv:
 	${PYTHON} -m venv ${VENV_SUBDIR}
-	. ${VENV_SUBDIR}/bin/activate; ${PIP} install -e .
+	. ${VENV_SUBDIR}/bin/activate; ${PIP} install -e . --log ${LOGFILE}
 
 data:
 	mkdir -p ${DATADIR}
