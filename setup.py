@@ -16,7 +16,7 @@ setup(
                 ]),
         install_requires=[ 
                 'pandas==2.2.2',
-                'numpy==1.26.4',
+                'numpy==1.23.5',
                 'matplotlib==3.9.1',
                 'scipy==1.12.0',
                 'joblib==1.4.2',

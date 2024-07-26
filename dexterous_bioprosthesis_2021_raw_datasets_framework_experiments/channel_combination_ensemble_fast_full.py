@@ -1783,11 +1783,9 @@ if __name__ == '__main__':
     np.random.seed(0)
     random.seed(0)
 
+
+    data_sets = [ os.path.join( settings.DATAPATH, "tsnre_windowed","A{}_Force_Exp_low_windowed".format(i)) for i in range(1,10) ]
     
-    
-    # data_path2 = os.path.join(settings.DATAPATH,"ottobock")
-    data_sets = [ os.path.join( settings.DATAPATH, "tsnre_windowed","A{}_Force_Exp_low_windowed".format(i)) for i in range(1,2) ]
-    # data_sets = [data_path2]
 
     output_directory = os.path.join(settings.EXPERIMENTS_RESULTS_PATH,"./results_channel_combination_ensemble_fast_full/")
 
@@ -1796,7 +1794,7 @@ if __name__ == '__main__':
     logger(log_dir,log_file, enable_logging=False)
     warnings.showwarning = warn_with_traceback    
     
-    run_experiment(data_sets, output_directory, n_splits=8, n_repeats=1,
+    run_experiment(data_sets, output_directory, n_splits=10, n_repeats=1,
                     random_state=0, n_jobs=-1, overwrite=True,n_channels=8)
     
     analysis_functions =[ 

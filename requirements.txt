@@ -6,7 +6,7 @@ joblib==1.4.2
 matplotlib==3.9.1
 -e git+https://github.com/ptrajdos/noise_tollerant_semg_ensemble.git@fe3eb0db9b58485ce0ecb903a7405d6cd837c57d#egg=mspca
 numba==0.60.0
-numpy==1.26.4
+numpy==1.23.5
 pandas==2.2.2
 pt_outlier_probability==0.0.1
 ptranks==0.0.1
